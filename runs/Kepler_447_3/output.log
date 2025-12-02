@@ -1,0 +1,52 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: Kepler-447 | Run #3
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 7.79430132 days
+
+Using period: 7.79430132 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0205 (depth=0.0420%), impact=0.944, dur=1.06hr
+  Top 10 Rp/Rs range: [0.0205, 0.0526], impact range: [0.139, 0.945]
+Gen 21: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0399 (depth=0.1594%), impact=0.950, dur=1.00hr
+  Top 10 Rp/Rs range: [0.0200, 0.0399], impact range: [0.872, 0.950]
+Gen 41: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0515 (depth=0.2648%), impact=0.950, dur=1.00hr
+  Top 10 Rp/Rs range: [0.0200, 0.0515], impact range: [0.906, 0.950]
+Gen 61: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0535 (depth=0.2864%), impact=0.950, dur=1.00hr
+  Top 10 Rp/Rs range: [0.0200, 0.0535], impact range: [0.950, 0.950]
+Gen 81: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0535 (depth=0.2864%), impact=0.950, dur=1.00hr
+  Top 10 Rp/Rs range: [0.0200, 0.0535], impact range: [0.950, 0.950]
+Gen 101: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0542 (depth=0.2937%), impact=0.950, dur=1.00hr
+  Top 10 Rp/Rs range: [0.0200, 0.0622], impact range: [0.915, 0.950]
+Gen 121: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0556 (depth=0.3091%), impact=0.950, dur=1.00hr
+  Top 10 Rp/Rs range: [0.0200, 0.0647], impact range: [0.864, 0.950]
+Gen 141: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0552 (depth=0.3048%), impact=0.950, dur=1.00hr
+  Top 10 Rp/Rs range: [0.0504, 0.0645], impact range: [0.950, 0.950]
+Gen 161: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0551 (depth=0.3040%), impact=0.950, dur=1.00hr
+  Top 10 Rp/Rs range: [0.0200, 0.0551], impact range: [0.944, 0.950]
+Gen 181: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0554 (depth=0.3069%), impact=0.950, dur=1.00hr
+  Top 10 Rp/Rs range: [0.0529, 0.0555], impact range: [0.873, 0.950]
+Gen 200: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0544 (depth=0.2958%), impact=0.950, dur=1.01hr
+  Top 10 Rp/Rs range: [0.0200, 0.0595], impact range: [0.919, 0.950]
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    7.794301 days
+T0:        121.672 BJD-2454833
+Rp/Rs:     0.0544
+Depth:     0.2958% (2958 ppm)
+Impact:    0.950
+Duration:  1.01 hours (from stellar params)
+============================================================
+
+Plot saved: runs\Kepler_447_3\results.png
+
+Results saved to: runs\Kepler_447_3
+  - Plot: runs\Kepler_447_3\results.png
+  - Log: runs\Kepler_447_3\output.log

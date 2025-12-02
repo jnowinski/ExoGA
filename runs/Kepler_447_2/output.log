@@ -1,0 +1,33 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: Kepler-447 | Run #2
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 7.79430132 days
+
+Using period: 7.79430132 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0258 (depth=0.0666%), impact=0.946, dur=1.04hr
+  Top 10 Rp/Rs range: [0.0209, 0.0320], impact range: [0.070, 0.946]
+Gen 21: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0407 (depth=0.1656%), impact=0.905, dur=1.37hr
+  Top 10 Rp/Rs range: [0.0200, 0.0417], impact range: [0.778, 0.950]
+Gen 41: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0486 (depth=0.2362%), impact=0.950, dur=1.00hr
+  Top 10 Rp/Rs range: [0.0200, 0.0486], impact range: [0.925, 0.950]
+Gen 61: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0486 (depth=0.2362%), impact=0.950, dur=1.00hr
+  Top 10 Rp/Rs range: [0.0200, 0.0486], impact range: [0.866, 0.950]
+Gen 81: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0480 (depth=0.2307%), impact=0.950, dur=1.00hr
+  Top 10 Rp/Rs range: [0.0200, 0.0480], impact range: [0.862, 0.950]
+Gen 101: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0480 (depth=0.2307%), impact=0.950, dur=1.00hr
+  Top 10 Rp/Rs range: [0.0200, 0.0480], impact range: [0.869, 0.950]
+Gen 121: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0482 (depth=0.2322%), impact=0.947, dur=1.03hr
+  Top 10 Rp/Rs range: [0.0200, 0.0482], impact range: [0.921, 0.950]
+Gen 141: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0474 (depth=0.2249%), impact=0.947, dur=1.03hr
+  Top 10 Rp/Rs range: [0.0200, 0.0474], impact range: [0.938, 0.950]
+Gen 161: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0474 (depth=0.2249%), impact=0.947, dur=1.04hr
+  Top 10 Rp/Rs range: [0.0474, 0.0489], impact range: [0.947, 0.950]
+Gen 181: Fitness=3.58e+00, P=7.794301d, Rp/Rs=0.0430 (depth=0.1846%), impact=0.947, dur=1.03hr
+  Top 10 Rp/Rs range: [0.0200, 0.0430], impact range: [0.921, 0.950]

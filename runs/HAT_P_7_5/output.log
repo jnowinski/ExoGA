@@ -1,0 +1,60 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: HAT-P-7 | Run #5
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 2.204735 days
+
+Using period: 2.204735 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=3.91e-03, P=2.204735d, Rp/Rs=0.0739 (depth=0.5455%), impact=0.469, dur=3.79hr
+  Top 10 Rp/Rs range: [0.0202, 0.0888], impact range: [0.062, 0.938]
+Gen 21: Fitness=2.53e-03, P=2.204735d, Rp/Rs=0.0787 (depth=0.6198%), impact=0.589, dur=3.47hr
+  Top 10 Rp/Rs range: [0.0547, 0.0923], impact range: [0.305, 0.829]
+Gen 41: Fitness=2.34e-03, P=2.204735d, Rp/Rs=0.0773 (depth=0.5979%), impact=0.543, dur=3.61hr
+  Top 10 Rp/Rs range: [0.0707, 0.0818], impact range: [0.502, 0.667]
+Gen 61: Fitness=2.32e-03, P=2.204735d, Rp/Rs=0.0773 (depth=0.5979%), impact=0.547, dur=3.59hr
+  Top 10 Rp/Rs range: [0.0706, 0.0854], impact range: [0.238, 0.634]
+Gen 81: Fitness=2.29e-03, P=2.204735d, Rp/Rs=0.0773 (depth=0.5977%), impact=0.552, dur=3.58hr
+  Top 10 Rp/Rs range: [0.0694, 0.0773], impact range: [0.319, 0.596]
+Gen 101: Fitness=2.27e-03, P=2.204735d, Rp/Rs=0.0776 (depth=0.6026%), impact=0.555, dur=3.57hr
+  Top 10 Rp/Rs range: [0.0746, 0.0820], impact range: [0.420, 0.633]
+Gen 121: Fitness=2.27e-03, P=2.204735d, Rp/Rs=0.0777 (depth=0.6043%), impact=0.559, dur=3.56hr
+  Top 10 Rp/Rs range: [0.0777, 0.0778], impact range: [0.557, 0.560]
+Gen 141: Fitness=2.27e-03, P=2.204735d, Rp/Rs=0.0777 (depth=0.6042%), impact=0.559, dur=3.56hr
+  Top 10 Rp/Rs range: [0.0777, 0.0777], impact range: [0.558, 0.559]
+Gen 161: Fitness=2.27e-03, P=2.204735d, Rp/Rs=0.0777 (depth=0.6042%), impact=0.559, dur=3.56hr
+  Top 10 Rp/Rs range: [0.0777, 0.0777], impact range: [0.558, 0.559]
+Gen 181: Fitness=2.27e-03, P=2.204735d, Rp/Rs=0.0777 (depth=0.6042%), impact=0.559, dur=3.56hr
+  Top 10 Rp/Rs range: [0.0777, 0.0777], impact range: [0.559, 0.559]
+Gen 200: Fitness=2.27e-03, P=2.204735d, Rp/Rs=0.0777 (depth=0.6042%), impact=0.559, dur=3.56hr
+  Top 10 Rp/Rs range: [0.0777, 0.0777], impact range: [0.558, 0.559]
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    2.204735 days
+T0:        121.359 BJD-2454833
+Rp/Rs:     0.0777
+Depth:     0.6042% (6042 ppm)
+Impact:    0.559
+Duration:  3.56 hours (from stellar params)
+============================================================
+
+Known HAT-P-7b:
+Period:   2.205 days
+Rp/Rs:    ~0.078
+Depth:    0.54% (5400 ppm)
+Impact:   0.47
+Duration: 3.7 hours
+============================================================
+
+Plot saved: runs\HAT_P_7_5\results.png
+
+Results saved to: runs\HAT_P_7_5
+  - Plot: runs\HAT_P_7_5\results.png
+  - Log: runs\HAT_P_7_5\output.log

@@ -1,0 +1,50 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: HAT-P-7 | Run #2
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 2.204735 days
+
+Using period: 2.204735 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=1.49e-02, P=2.204735d, Rp/Rs=0.0740 (depth=0.5470%), impact=0.115, dur=4.28hr
+  Top 10 Rp/Rs range: [0.0217, 0.0936], impact range: [0.104, 0.906]
+Gen 21: Fitness=4.17e-03, P=2.204735d, Rp/Rs=0.0808 (depth=0.6525%), impact=0.530, dur=3.64hr
+  Top 10 Rp/Rs range: [0.0508, 0.0808], impact range: [0.195, 0.633]
+Gen 41: Fitness=2.48e-03, P=2.204735d, Rp/Rs=0.0777 (depth=0.6034%), impact=0.579, dur=3.50hr
+  Top 10 Rp/Rs range: [0.0661, 0.0910], impact range: [0.324, 0.664]
+Gen 61: Fitness=2.32e-03, P=2.204735d, Rp/Rs=0.0770 (depth=0.5924%), impact=0.552, dur=3.58hr
+  Top 10 Rp/Rs range: [0.0672, 0.0809], impact range: [0.274, 0.647]
+
+*** CONVERGED at generation 63 ***
+    Fitness change over last 20 gens: 0.00e+00
+    (threshold: 1.00e-08)
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    2.204735 days
+T0:        121.359 BJD-2454833
+Rp/Rs:     0.0770
+Depth:     0.5924% (5924 ppm)
+Impact:    0.552
+Duration:  3.58 hours (from stellar params)
+============================================================
+
+Known HAT-P-7b:
+Period:   2.205 days
+Rp/Rs:    ~0.078
+Depth:    0.54% (5400 ppm)
+Impact:   0.47
+Duration: 3.7 hours
+============================================================
+
+Plot saved: runs\HAT_P_7_2\results.png
+
+Results saved to: runs\HAT_P_7_2
+  - Plot: runs\HAT_P_7_2\results.png
+  - Log: runs\HAT_P_7_2\output.log

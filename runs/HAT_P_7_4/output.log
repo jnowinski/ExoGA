@@ -1,0 +1,52 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: HAT-P-7 | Run #4
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 2.204735 days
+
+Using period: 2.204735 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=2.91e-02, P=2.204735d, Rp/Rs=0.0585 (depth=0.3425%), impact=0.184, dur=4.23hr
+  Top 10 Rp/Rs range: [0.0200, 0.0662], impact range: [0.184, 0.900]
+Gen 21: Fitness=3.83e-03, P=2.204735d, Rp/Rs=0.0763 (depth=0.5815%), impact=0.472, dur=3.79hr
+  Top 10 Rp/Rs range: [0.0200, 0.1031], impact range: [0.472, 0.950]
+Gen 41: Fitness=2.74e-03, P=2.204735d, Rp/Rs=0.0769 (depth=0.5921%), impact=0.527, dur=3.65hr
+  Top 10 Rp/Rs range: [0.0710, 0.0848], impact range: [0.401, 0.633]
+Gen 61: Fitness=2.28e-03, P=2.204735d, Rp/Rs=0.0780 (depth=0.6091%), impact=0.562, dur=3.55hr
+  Top 10 Rp/Rs range: [0.0681, 0.0785], impact range: [0.408, 0.700]
+Gen 81: Fitness=2.28e-03, P=2.204735d, Rp/Rs=0.0780 (depth=0.6091%), impact=0.562, dur=3.55hr
+  Top 10 Rp/Rs range: [0.0718, 0.0948], impact range: [0.546, 0.837]
+
+*** CONVERGED at generation 100 ***
+    Fitness change over last 50 gens: 0.00e+00
+    (threshold: 1.00e-10)
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    2.204735 days
+T0:        121.358 BJD-2454833
+Rp/Rs:     0.0780
+Depth:     0.6091% (6091 ppm)
+Impact:    0.562
+Duration:  3.55 hours (from stellar params)
+============================================================
+
+Known HAT-P-7b:
+Period:   2.205 days
+Rp/Rs:    ~0.078
+Depth:    0.54% (5400 ppm)
+Impact:   0.47
+Duration: 3.7 hours
+============================================================
+
+Plot saved: runs\HAT_P_7_4\results.png
+
+Results saved to: runs\HAT_P_7_4
+  - Plot: runs\HAT_P_7_4\results.png
+  - Log: runs\HAT_P_7_4\output.log
