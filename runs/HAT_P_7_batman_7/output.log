@@ -1,0 +1,26 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: HAT-P-7 | Run #7
+Transit Model: batman
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 2.20473500 days
+
+Using period: 2.204735 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=9.84e-03, P=2.204735d, Rp/Rs=0.0856 (depth=0.7325%), impact=0.677, dur=3.15hr
+  u1=0.3075 (fixed), u2=0.2974 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0550, 0.1146], impact range: [0.127, 0.874]
+Gen 21: Fitness=3.55e-03, P=2.204735d, Rp/Rs=0.0756 (depth=0.5722%), impact=0.519, dur=3.67hr
+  u1=0.3075 (fixed), u2=0.2405 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0738, 0.0800], impact range: [0.455, 0.622]
+Gen 41: Fitness=2.27e-03, P=2.204735d, Rp/Rs=0.0771 (depth=0.5940%), impact=0.539, dur=3.61hr
+  u1=0.3075 (fixed), u2=0.3293 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0730, 0.0779], impact range: [0.491, 0.576]
+Gen 61: Fitness=2.25e-03, P=2.204735d, Rp/Rs=0.0771 (depth=0.5942%), impact=0.546, dur=3.60hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0771, 0.0771], impact range: [0.545, 0.546]

@@ -1,0 +1,53 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: CoRoT-1 | Run #5
+Transit Model: batman
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 1.50895570 days
+
+Using period: 1.5089557 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+*** u2 FIXED at theoretical value: 0.2821 ***
+
+Gen 1: Fitness=3.22e+00, P=1.508956d, Rp/Rs=0.1456 (depth=2.1212%), impact=0.612, dur=1.98hr
+  u1=0.3035 (fixed), u2=0.2821 (Claret: 0.2821)
+  Top 10 Rp/Rs range: [0.0630, 0.1488], impact range: [0.057, 0.868]
+Gen 21: Fitness=3.01e+00, P=1.508956d, Rp/Rs=0.1331 (depth=1.7727%), impact=0.391, dur=2.30hr
+  u1=0.3035 (fixed), u2=0.2821 (Claret: 0.2821)
+  Top 10 Rp/Rs range: [0.1256, 0.1331], impact range: [0.258, 0.515]
+Gen 41: Fitness=3.01e+00, P=1.508956d, Rp/Rs=0.1358 (depth=1.8443%), impact=0.511, dur=2.15hr
+  u1=0.3035 (fixed), u2=0.2821 (Claret: 0.2821)
+  Top 10 Rp/Rs range: [0.1358, 0.1358], impact range: [0.411, 0.531]
+Gen 61: Fitness=3.01e+00, P=1.508956d, Rp/Rs=0.1349 (depth=1.8198%), impact=0.499, dur=2.17hr
+  u1=0.3035 (fixed), u2=0.2821 (Claret: 0.2821)
+  Top 10 Rp/Rs range: [0.1340, 0.1355], impact range: [0.493, 0.513]
+Gen 81: Fitness=3.01e+00, P=1.508956d, Rp/Rs=0.1345 (depth=1.8093%), impact=0.499, dur=2.17hr
+  u1=0.3035 (fixed), u2=0.2821 (Claret: 0.2821)
+  Top 10 Rp/Rs range: [0.1345, 0.1345], impact range: [0.499, 0.500]
+Gen 100: Fitness=3.01e+00, P=1.508956d, Rp/Rs=0.1345 (depth=1.8090%), impact=0.499, dur=2.17hr
+  u1=0.3035 (fixed), u2=0.2821 (Claret: 0.2821)
+  Top 10 Rp/Rs range: [0.1345, 0.1345], impact range: [0.499, 0.499]
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    1.508956 days
+T0:        1469.075 BJD-2454833
+Rp/Rs:     0.1345
+Depth:     1.8090% (18090 ppm)
+Impact:    0.499
+Duration:  2.17 hours (from stellar params)
+u1:        0.3035 (FIXED from Claret)
+u2:        0.2821 (Claret: 0.2821)
+============================================================
+
+Plot saved: runs\CoRoT_1_batman_5\results.png
+
+Results saved to: runs\CoRoT_1_batman_5
+  - Plot: runs\CoRoT_1_batman_5\results.png
+  - Log: runs\CoRoT_1_batman_5\output.log

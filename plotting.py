@@ -7,11 +7,14 @@ import matplotlib.pyplot as plt
 from transit_models import limb_darkened_transit, expected_duration
 
 
-def plot_results(best, time, flux, stellar, fitness_history, save_path='grid_ga_stellar_fit.png'):
+def plot_results(best, time, flux, stellar, fitness_history, star_name='HAT-P-7', save_path='grid_ga_stellar_fit.png'):
     """Generate fit plots with convergence graph"""
     
-    # Generate best-fit model with limb darkening
-    model = limb_darkened_transit(time, best.T0, best.RpRs, best.P, best.impact, stellar)
+    # Generate best-fit model with limb darkening (use fixed u1, evolved u2)
+    from transit_models import StellarParams
+    stellar_with_ld = StellarParams(stellar.R_star, stellar.M_star, stellar.u1, best.u2)
+    
+    model = limb_darkened_transit(time, best.T0, best.RpRs, best.P, best.impact, stellar_with_ld)  # , ecc=best.ecc, omega=best.omega)
     residuals = flux - model
     
     # Phase fold
@@ -58,14 +61,14 @@ def plot_results(best, time, flux, stellar, fitness_history, save_path='grid_ga_
     # Plot model
     phase_model = np.linspace(-0.5, 0.5, 1000)
     time_model = phase_model * best.P + best.T0
-    flux_model = limb_darkened_transit(time_model, best.T0, best.RpRs, best.P, best.impact, stellar)
+    flux_model = limb_darkened_transit(time_model, best.T0, best.RpRs, best.P, best.impact, stellar_with_ld)  # , ecc=best.ecc, omega=best.omega)
     ax.plot(phase_model, flux_model, 'r-', linewidth=2, label='Limb-darkened model')
     
     duration = expected_duration(best.P, stellar, best.impact)
     ax.set_xlabel('Phase', fontsize=12)
     ax.set_ylabel('Normalized Flux', fontsize=12)
-    ax.set_title(f'HAT-P-7b Transit (P={best.P:.6f}d, Rp/Rs={best.RpRs:.4f}, depth={best.depth*100:.4f}%, '
-                f'impact={best.impact:.2f}, dur={duration*24:.2f}hr)', fontsize=13)
+    ax.set_title(f'{star_name}b Transit (P={best.P:.6f}d, Rp/Rs={best.RpRs:.4f}, depth={best.depth*100:.4f}%, '
+                 f'b={best.impact:.2f}, u1={stellar.u1:.3f} fix, u2={best.u2:.3f})', fontsize=12)  # , ecc={best.ecc:.3f}, ω={best.omega:.1f}°)
     ax.legend()
     ax.grid(alpha=0.3)
     ax.set_xlim(-0.15, 0.15)

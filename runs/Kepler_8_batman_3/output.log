@@ -1,0 +1,51 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: Kepler-8 | Run #3
+Transit Model: batman
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 3.52249860 days
+
+Using period: 3.5224986 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=6.34e+00, P=3.522499d, Rp/Rs=0.0461 (depth=0.2125%), impact=0.111, dur=4.12hr
+  u1=0.3089 (fixed), u2=0.2762 (Claret: 0.2802)
+  Top 10 Rp/Rs range: [0.0201, 0.1027], impact range: [0.111, 0.763]
+Gen 21: Fitness=6.23e+00, P=3.522499d, Rp/Rs=0.0923 (depth=0.8524%), impact=0.763, dur=2.68hr
+  u1=0.3089 (fixed), u2=0.2594 (Claret: 0.2802)
+  Top 10 Rp/Rs range: [0.0876, 0.0980], impact range: [0.731, 0.786]
+Gen 41: Fitness=6.23e+00, P=3.522499d, Rp/Rs=0.0927 (depth=0.8595%), impact=0.763, dur=2.68hr
+  u1=0.3089 (fixed), u2=0.2241 (Claret: 0.2802)
+  Top 10 Rp/Rs range: [0.0898, 0.0931], impact range: [0.715, 0.763]
+Gen 61: Fitness=6.23e+00, P=3.522499d, Rp/Rs=0.0916 (depth=0.8388%), impact=0.753, dur=2.73hr
+  u1=0.3089 (fixed), u2=0.2241 (Claret: 0.2802)
+  Top 10 Rp/Rs range: [0.0916, 0.0927], impact range: [0.746, 0.753]
+Gen 81: Fitness=6.23e+00, P=3.522499d, Rp/Rs=0.0919 (depth=0.8437%), impact=0.752, dur=2.73hr
+  u1=0.3089 (fixed), u2=0.2241 (Claret: 0.2802)
+  Top 10 Rp/Rs range: [0.0918, 0.0919], impact range: [0.751, 0.752]
+Gen 100: Fitness=6.23e+00, P=3.522499d, Rp/Rs=0.0919 (depth=0.8437%), impact=0.752, dur=2.73hr
+  u1=0.3089 (fixed), u2=0.2241 (Claret: 0.2802)
+  Top 10 Rp/Rs range: [0.0918, 0.0919], impact range: [0.752, 0.752]
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    3.522499 days
+T0:        2392.467 BJD-2454833
+Rp/Rs:     0.0919
+Depth:     0.8437% (8437 ppm)
+Impact:    0.752
+Duration:  2.73 hours (from stellar params)
+u1:        0.3089 (FIXED from Claret)
+u2:        0.2241 (Claret: 0.2802)
+============================================================
+
+Plot saved: runs\Kepler_8_batman_3\results.png
+
+Results saved to: runs\Kepler_8_batman_3
+  - Plot: runs\Kepler_8_batman_3\results.png
+  - Log: runs\Kepler_8_batman_3\output.log

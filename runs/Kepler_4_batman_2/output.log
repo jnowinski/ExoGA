@@ -1,0 +1,26 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: Kepler-4 | Run #2
+Transit Model: batman
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 2.20473500 days
+
+Using period: 2.204735 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=1.11e+00, P=2.204735d, Rp/Rs=0.1260 (depth=1.5884%), impact=0.886, dur=1.73hr
+  u1=0.3599 (fixed), u2=0.2857 (Claret: 0.2615)
+  ECCENTRIC: ecc=0.2741, omega=282.7° | Pop: 240 circular, 60 eccentric
+  Top 10 Rp/Rs range: [0.0205, 0.1260], impact range: [0.104, 0.940]
+Gen 21: Fitness=1.11e+00, P=2.204735d, Rp/Rs=0.0200 (depth=0.0400%), impact=0.950, dur=1.17hr
+  u1=0.3599 (fixed), u2=0.2411 (Claret: 0.2615)
+  ECCENTRIC: ecc=0.2172, omega=204.0° | Pop: 59 circular, 241 eccentric
+  Top 10 Rp/Rs range: [0.0200, 0.0422], impact range: [0.928, 0.950]
+Gen 41: Fitness=1.11e+00, P=2.204735d, Rp/Rs=0.0209 (depth=0.0436%), impact=0.908, dur=1.57hr
+  u1=0.3599 (fixed), u2=0.2092 (Claret: 0.2615)
+  ECCENTRIC: ecc=0.2349, omega=216.9° | Pop: 13 circular, 287 eccentric
+  Top 10 Rp/Rs range: [0.0200, 0.0346], impact range: [0.815, 0.950]

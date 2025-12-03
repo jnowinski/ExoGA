@@ -17,13 +17,17 @@ def main():
     
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='GA-based transit detection')
+    parser.add_argument('--star', type=str, default='HAT-P-7',
+                       help='Star name (HAT-P-7, WASP-12, etc.)')
     parser.add_argument('--model', type=str, default='batman', 
-                       choices=['batman', 'pytransit', 'ellc'],
-                       help='Transit model to use (batman, pytransit, or ellc)')
+                       choices=['batman', 'pytransit'],
+                       help='Transit model to use (batman or pytransit)')
+    parser.add_argument('--fix-u2', action='store_true',
+                       help='Fix u2 limb darkening at theoretical value (default: evolve u2)')
     args = parser.parse_args()
     
     # Load data and stellar parameters
-    star_name = 'HAT-P-7'
+    star_name = args.star
     time, flux, stellar = load_data(star_name)
     
     # Create runs folder with star name and run number
@@ -65,7 +69,8 @@ def main():
     print("="*60)
     
     # Get known period (set USE_HARDCODED_PERIOD=True to skip archive query)
-    known_period = get_known_period('HAT-P-7 b', use_hardcoded=True)
+    planet_name = star_name + ' b'
+    known_period = get_known_period(planet_name, use_hardcoded=True)
     print(f"\nUsing period: {known_period} days")
     
     # Run GA optimization
@@ -73,8 +78,13 @@ def main():
     print("GA OPTIMIZATION")
     print("="*60)
     
-    best, fitness_history = run_ga(time, flux, stellar, known_period, 
-                                    pop_size=100, n_gen=200, model=args.model)
+    # Determine whether to evolve u2 (default: True, unless --fix-u2 flag is set)
+    evolve_u2 = not args.fix_u2
+    if not evolve_u2:
+        print(f"*** u2 FIXED at theoretical value: {stellar.u2:.4f} ***\n")
+    
+    # Use default parameters from ga_algorithms.py
+    best, fitness_history = run_ga(time, flux, stellar, known_period, model=args.model, evolve_u2=evolve_u2)
     
     # Calculate final metrics
     duration = expected_duration(best.P, stellar, best.impact)
@@ -89,11 +99,15 @@ def main():
     print(f"Depth:     {best.depth*100:.4f}% ({best.depth*1e6:.0f} ppm)")
     print(f"Impact:    {best.impact:.3f}")
     print(f"Duration:  {duration*24:.2f} hours (from stellar params)")
+    print(f"u1:        {stellar.u1:.4f} (FIXED from Claret)")
+    print(f"u2:        {best.u2:.4f} (Claret: {stellar.u2:.4f})")
+    # print(f"ecc:       {best.ecc:.4f}")
+    # print(f"omega:     {best.omega:.1f} degrees")
     print("="*60)
     
     # Plot results
     plot_file = os.path.join(run_dir, 'results.png')
-    plot_results(best, time, flux, stellar, fitness_history, save_path=plot_file)
+    plot_results(best, time, flux, stellar, fitness_history, star_name=star_name, save_path=plot_file)
     print(f"\nResults saved to: {run_dir}")
     print(f"  - Plot: {plot_file}")
     print(f"  - Log: {log_file}")

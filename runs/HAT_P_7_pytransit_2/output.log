@@ -1,0 +1,47 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: HAT-P-7 | Run #2
+Transit Model: pytransit
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 2.20473500 days
+
+Using period: 2.204735 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=1.42e-01, P=2.204735d, Rp/Rs=0.0510 (depth=0.2604%), impact=0.904, dur=1.83hr
+  Top 10 Rp/Rs range: [0.0270, 0.1260], impact range: [0.090, 0.940]
+Gen 21: Fitness=3.34e-02, P=2.204735d, Rp/Rs=0.0634 (depth=0.4023%), impact=0.668, dur=3.19hr
+  Top 10 Rp/Rs range: [0.0200, 0.0677], impact range: [0.322, 0.948]
+Gen 41: Fitness=1.36e-02, P=2.204735d, Rp/Rs=0.0685 (depth=0.4687%), impact=0.458, dur=3.82hr
+  Top 10 Rp/Rs range: [0.0200, 0.0731], impact range: [0.310, 0.947]
+Gen 61: Fitness=7.82e-03, P=2.204735d, Rp/Rs=0.0735 (depth=0.5404%), impact=0.257, dur=4.16hr
+  Top 10 Rp/Rs range: [0.0200, 0.1383], impact range: [0.257, 0.815]
+Gen 81: Fitness=7.49e-03, P=2.204735d, Rp/Rs=0.0756 (depth=0.5718%), impact=0.257, dur=4.16hr
+  Top 10 Rp/Rs range: [0.0507, 0.0765], impact range: [0.107, 0.872]
+Gen 101: Fitness=7.49e-03, P=2.204735d, Rp/Rs=0.0756 (depth=0.5718%), impact=0.257, dur=4.16hr
+  Top 10 Rp/Rs range: [0.0369, 0.0857], impact range: [0.000, 0.633]
+
+*** CONVERGED at generation 115 ***
+    Fitness change over last 50 gens: 0.00e+00
+    (threshold: 1.00e-10)
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    2.204735 days
+T0:        163.257 BJD-2454833
+Rp/Rs:     0.0756
+Depth:     0.5718% (5718 ppm)
+Impact:    0.257
+Duration:  4.16 hours (from stellar params)
+============================================================
+
+Plot saved: runs\HAT_P_7_pytransit_2\results.png
+
+Results saved to: runs\HAT_P_7_pytransit_2
+  - Plot: runs\HAT_P_7_pytransit_2\results.png
+  - Log: runs\HAT_P_7_pytransit_2\output.log

@@ -1,0 +1,99 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: HAT-P-7 | Run #6
+Transit Model: batman
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 2.20473500 days
+
+Using period: 2.204735 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=8.93e-02, P=2.204735d, Rp/Rs=0.0624 (depth=0.3896%), impact=0.893, dur=1.92hr
+  u1=0.3075 (fixed), u2=0.2927 (Claret: 0.2807)
+  CIRCULAR: ecc=0.0000, omega=90.0° | Pop: 86 circular, 14 eccentric
+  Top 10 Rp/Rs range: [0.0218, 0.1302], impact range: [0.177, 0.909]
+Gen 21: Fitness=3.97e-03, P=2.204735d, Rp/Rs=0.0727 (depth=0.5280%), impact=0.406, dur=3.93hr
+  u1=0.3075 (fixed), u2=0.2354 (Claret: 0.2807)
+  ECCENTRIC: ecc=0.1045, omega=85.9° | Pop: 20 circular, 80 eccentric
+  Top 10 Rp/Rs range: [0.0727, 0.0817], impact range: [0.186, 0.596]
+Gen 41: Fitness=2.46e-03, P=2.204735d, Rp/Rs=0.0769 (depth=0.5909%), impact=0.500, dur=3.72hr
+  u1=0.3075 (fixed), u2=0.2245 (Claret: 0.2807)
+  ECCENTRIC: ecc=0.1138, omega=148.8° | Pop: 16 circular, 84 eccentric
+  Top 10 Rp/Rs range: [0.0750, 0.0769], impact range: [0.369, 0.500]
+Gen 61: Fitness=2.28e-03, P=2.204735d, Rp/Rs=0.0772 (depth=0.5962%), impact=0.560, dur=3.56hr
+  u1=0.3075 (fixed), u2=0.3246 (Claret: 0.2807)
+  ECCENTRIC: ecc=0.0054, omega=159.8° | Pop: 7 circular, 93 eccentric
+  Top 10 Rp/Rs range: [0.0761, 0.0773], impact range: [0.498, 0.560]
+Gen 81: Fitness=2.27e-03, P=2.204735d, Rp/Rs=0.0767 (depth=0.5888%), impact=0.540, dur=3.61hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  ECCENTRIC: ecc=0.0544, omega=169.2° | Pop: 20 circular, 80 eccentric
+  Top 10 Rp/Rs range: [0.0740, 0.0775], impact range: [0.460, 0.586]
+Gen 101: Fitness=2.26e-03, P=2.204735d, Rp/Rs=0.0774 (depth=0.5988%), impact=0.543, dur=3.60hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  ECCENTRIC: ecc=0.0000, omega=203.1° | Pop: 12 circular, 88 eccentric
+  Top 10 Rp/Rs range: [0.0767, 0.0776], impact range: [0.539, 0.554]
+Gen 121: Fitness=2.25e-03, P=2.204735d, Rp/Rs=0.0773 (depth=0.5983%), impact=0.544, dur=3.60hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  ECCENTRIC: ecc=0.0245, omega=180.3° | Pop: 22 circular, 78 eccentric
+  Top 10 Rp/Rs range: [0.0772, 0.0806], impact range: [0.542, 0.600]
+Gen 141: Fitness=2.24e-03, P=2.204735d, Rp/Rs=0.0772 (depth=0.5959%), impact=0.547, dur=3.59hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  ECCENTRIC: ecc=0.0151, omega=167.2° | Pop: 24 circular, 76 eccentric
+  Top 10 Rp/Rs range: [0.0764, 0.0807], impact range: [0.413, 0.559]
+Gen 161: Fitness=2.24e-03, P=2.204735d, Rp/Rs=0.0774 (depth=0.5997%), impact=0.552, dur=3.58hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  CIRCULAR: ecc=0.0000, omega=90.0° | Pop: 32 circular, 68 eccentric
+  Top 10 Rp/Rs range: [0.0772, 0.0775], impact range: [0.547, 0.554]
+Gen 181: Fitness=2.24e-03, P=2.204735d, Rp/Rs=0.0774 (depth=0.5991%), impact=0.551, dur=3.58hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  CIRCULAR: ecc=0.0000, omega=90.0° | Pop: 79 circular, 21 eccentric
+  Top 10 Rp/Rs range: [0.0774, 0.0774], impact range: [0.551, 0.551]
+Gen 201: Fitness=2.24e-03, P=2.204735d, Rp/Rs=0.0774 (depth=0.5992%), impact=0.551, dur=3.58hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  CIRCULAR: ecc=0.0000, omega=90.0° | Pop: 82 circular, 18 eccentric
+  Top 10 Rp/Rs range: [0.0774, 0.0774], impact range: [0.551, 0.551]
+Gen 221: Fitness=2.24e-03, P=2.204735d, Rp/Rs=0.0774 (depth=0.5992%), impact=0.551, dur=3.58hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  CIRCULAR: ecc=0.0000, omega=90.0° | Pop: 57 circular, 43 eccentric
+  Top 10 Rp/Rs range: [0.0774, 0.0774], impact range: [0.551, 0.551]
+Gen 241: Fitness=2.24e-03, P=2.204735d, Rp/Rs=0.0774 (depth=0.5992%), impact=0.551, dur=3.58hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  CIRCULAR: ecc=0.0000, omega=90.0° | Pop: 67 circular, 33 eccentric
+  Top 10 Rp/Rs range: [0.0774, 0.0774], impact range: [0.551, 0.551]
+Gen 261: Fitness=2.24e-03, P=2.204735d, Rp/Rs=0.0774 (depth=0.5992%), impact=0.551, dur=3.58hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  CIRCULAR: ecc=0.0000, omega=90.0° | Pop: 64 circular, 36 eccentric
+  Top 10 Rp/Rs range: [0.0774, 0.0774], impact range: [0.551, 0.551]
+Gen 281: Fitness=2.24e-03, P=2.204735d, Rp/Rs=0.0774 (depth=0.5992%), impact=0.551, dur=3.58hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  CIRCULAR: ecc=0.0000, omega=90.0° | Pop: 72 circular, 28 eccentric
+  Top 10 Rp/Rs range: [0.0774, 0.0774], impact range: [0.551, 0.551]
+
+*** CONVERGED at generation 295 ***
+    Fitness change over last 50 gens: 3.32e-11
+    (threshold: 1.00e-10)
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    2.204735 days
+T0:        121.359 BJD-2454833
+Rp/Rs:     0.0774
+Depth:     0.5992% (5992 ppm)
+Impact:    0.551
+Duration:  3.58 hours (from stellar params)
+u1:        0.3075 (FIXED from Claret)
+u2:        0.3368 (Claret: 0.2807)
+ecc:       0.0000
+omega:     90.0 degrees
+============================================================
+
+Plot saved: runs\HAT_P_7_batman_6\results.png
+
+Results saved to: runs\HAT_P_7_batman_6
+  - Plot: runs\HAT_P_7_batman_6\results.png
+  - Log: runs\HAT_P_7_batman_6\output.log

@@ -1,0 +1,51 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: CoRoT-1 | Run #3
+Transit Model: batman
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 1.50895570 days
+
+Using period: 1.5089557 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=3.03e+00, P=1.508956d, Rp/Rs=0.1267 (depth=1.6065%), impact=0.568, dur=2.06hr
+  u1=0.3035 (fixed), u2=0.3129 (Claret: 0.2821)
+  Top 10 Rp/Rs range: [0.0699, 0.1477], impact range: [0.174, 0.862]
+Gen 21: Fitness=3.01e+00, P=1.508956d, Rp/Rs=0.1326 (depth=1.7586%), impact=0.476, dur=2.20hr
+  u1=0.3035 (fixed), u2=0.2934 (Claret: 0.2821)
+  Top 10 Rp/Rs range: [0.1326, 0.1363], impact range: [0.382, 0.492]
+Gen 41: Fitness=3.01e+00, P=1.508956d, Rp/Rs=0.1339 (depth=1.7940%), impact=0.476, dur=2.20hr
+  u1=0.3035 (fixed), u2=0.3385 (Claret: 0.2821)
+  Top 10 Rp/Rs range: [0.1326, 0.1343], impact range: [0.446, 0.484]
+Gen 61: Fitness=3.01e+00, P=1.508956d, Rp/Rs=0.1333 (depth=1.7781%), impact=0.476, dur=2.20hr
+  u1=0.3035 (fixed), u2=0.3385 (Claret: 0.2821)
+  Top 10 Rp/Rs range: [0.1333, 0.1339], impact range: [0.476, 0.476]
+Gen 81: Fitness=3.01e+00, P=1.508956d, Rp/Rs=0.1338 (depth=1.7902%), impact=0.490, dur=2.18hr
+  u1=0.3035 (fixed), u2=0.3375 (Claret: 0.2821)
+  Top 10 Rp/Rs range: [0.1336, 0.1342], impact range: [0.484, 0.493]
+Gen 100: Fitness=3.01e+00, P=1.508956d, Rp/Rs=0.1338 (depth=1.7901%), impact=0.489, dur=2.18hr
+  u1=0.3035 (fixed), u2=0.3385 (Claret: 0.2821)
+  Top 10 Rp/Rs range: [0.1338, 0.1338], impact range: [0.489, 0.489]
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    1.508956 days
+T0:        1469.075 BJD-2454833
+Rp/Rs:     0.1338
+Depth:     1.7903% (17903 ppm)
+Impact:    0.489
+Duration:  2.18 hours (from stellar params)
+u1:        0.3035 (FIXED from Claret)
+u2:        0.3385 (Claret: 0.2821)
+============================================================
+
+Plot saved: runs\CoRoT_1_batman_3\results.png
+
+Results saved to: runs\CoRoT_1_batman_3
+  - Plot: runs\CoRoT_1_batman_3\results.png
+  - Log: runs\CoRoT_1_batman_3\output.log

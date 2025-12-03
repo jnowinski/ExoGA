@@ -9,15 +9,16 @@ import os
 from transit_models import StellarParams
 
 
-def get_limb_darkening_claret(Teff, logg, feh):
+def get_limb_darkening_claret(Teff, logg, feh, mission='Kepler'):
     """
     Get quadratic limb darkening coefficients using exotic-ld
-    Uses stellar atmosphere models (ATLAS/PHOENIX) for Kepler bandpass
+    Uses stellar atmosphere models (ATLAS/PHOENIX) for mission-specific bandpass
     
     Args:
         Teff: Effective temperature (K)
         logg: Surface gravity log10(g [cm/s²])
         feh: Metallicity [Fe/H]
+        mission: 'TESS', 'Kepler', or 'CoRoT' (default 'Kepler')
     
     Returns:
         u1, u2: quadratic limb darkening coefficients
@@ -26,7 +27,7 @@ def get_limb_darkening_claret(Teff, logg, feh):
         from exotic_ld import StellarLimbDarkening
         
         # Create limb darkening calculator
-        # M_H is metallicity, ld_model can be 'claret', '3D', 'stagger', etc.
+        # M_H is metallicity, ld_model can be 'claret', 'mps1', 'stagger', etc.
         sld = StellarLimbDarkening(
             M_H=feh,
             Teff=Teff,
@@ -35,11 +36,20 @@ def get_limb_darkening_claret(Teff, logg, feh):
             ld_data_path='default'
         )
         
-        # Compute quadratic coefficients for Kepler bandpass
-        # exotic-ld uses filter names like 'Kepler', 'TESS', 'JWST/NIRCam.F322W2', etc.
-        coeffs = sld.compute_quadratic_ld_coeffs(wavelength_range=[4200, 9000], mode='Kepler')
+        # Compute quadratic coefficients for mission-specific bandpass
+        # TESS: 6000-10000 Å, Kepler: 4200-9000 Å, CoRoT: 3000-10000 Å (wide)
+        if mission == 'TESS':
+            wavelength_range = [6000, 10000]
+        elif mission == 'CoRoT':
+            wavelength_range = [3000, 10000]
+        else:  # Kepler or default
+            wavelength_range = [4200, 9000]
+        
+        # Don't use mode parameter, just wavelength_range
+        coeffs = sld.compute_quadratic_ld_coeffs(wavelength_range=wavelength_range)
         
         u1, u2 = coeffs
+        print(f"  u1, u2 = {u1:.4f}, {u2:.4f} (exotic-ld/Claret, {mission} band)")
         return float(u1), float(u2)
         
     except Exception as e:
@@ -115,7 +125,25 @@ def load_data(star_name='HAT-P-7', cache_dir='data_cache'):
             print(f"  Cache load failed ({e}), re-downloading...")
     
     print(f"Downloading {star_name} data from archive...")
-    search = lk.search_lightcurve(star_name, author='Kepler', cadence='long')
+    
+    # Try TESS first (better time resolution), then Kepler, then CoRoT
+    search = lk.search_lightcurve(star_name, author='SPOC', cadence='short')
+    mission = 'TESS'
+    
+    if len(search) == 0:
+        print(f"  No TESS data found, trying Kepler...")
+        search = lk.search_lightcurve(star_name, author='Kepler', cadence='long')
+        mission = 'Kepler'
+    
+    if len(search) == 0:
+        print(f"  No Kepler data found, trying CoRoT...")
+        search = lk.search_lightcurve(star_name, mission='CoRoT')
+        mission = 'CoRoT'
+    
+    if len(search) == 0:
+        raise ValueError(f"No TESS, Kepler, or CoRoT data found for {star_name}")
+    
+    print(f"  Found {len(search)} observations")
     lc = search.download_all().stitch()
     print("  Data downloaded.")
     time = lc.time.value
@@ -136,17 +164,28 @@ def load_data(star_name='HAT-P-7', cache_dir='data_cache'):
     
     # Query stellar parameters from Kepler Input Catalog (KIC)
     print(f"\nQuerying stellar parameters from catalogs...")
+
+    def sanitize_meta(value, default):
+        if value is None:
+            return default
+        try:
+            if np.isnan(value):
+                return default
+        except TypeError:
+            pass
+        return value
     
     try:
-        R_star = lc.meta["RADIUS"]  # Solar radii
-        Teff = lc.meta["TEFF"]  # Effective temperature
-        logg = lc.meta.get("LOGG", 4.0)  # Surface gravity
-        feh = lc.meta.get("FEH", 0.0)  # Metallicity [Fe/H]
+        R_star = sanitize_meta(lc.meta.get("RADIUS"), None)
+        Teff = sanitize_meta(lc.meta.get("TEFF"), None)
+        logg = sanitize_meta(lc.meta.get("LOGG"), 4.0)
+        feh = sanitize_meta(lc.meta.get("FEH"), 0.0)
         M_star = None
         
         # Try to get mass from metadata first
-        if lc.meta.get("MASS") is not None:
-            M_star = lc.meta["MASS"]
+        mass_meta = sanitize_meta(lc.meta.get("MASS"), None)
+        if mass_meta is not None:
+            M_star = mass_meta
             print(f"  M* = {M_star:.2f} M_sun (from KIC metadata)")
         
         # If mass not in metadata, query from astroquery MAST catalogs
@@ -159,29 +198,36 @@ def load_data(star_name='HAT-P-7', cache_dir='data_cache'):
                 catalog_data = Catalogs.query_object(star_name, catalog="TIC", radius=0.01)
                 
                 if len(catalog_data) > 0 and 'mass' in catalog_data.colnames:
-                    M_star = float(catalog_data['mass'][0])
-                    print(f"  M* = {M_star:.2f} M_sun (from TIC)")
-                else:
+                    mass_entry = catalog_data['mass'][0]
+                    if not np.ma.is_masked(mass_entry):
+                        M_star = float(mass_entry)
+                        print(f"  M* = {M_star:.2f} M_sun (from TIC)")
+                if M_star is None:
                     print(f"  Mass not found in TIC, trying Gaia...")
                     # Estimate from radius using mass-radius relation
                     # For main sequence stars: M ≈ R^2.5 (rough approximation)
-                    M_star = R_star ** 2.5
-                    print(f"  M* = {M_star:.2f} M_sun (estimated from R-M relation)")
+                    if R_star is not None:
+                        M_star = R_star ** 2.5
+                        print(f"  M* = {M_star:.2f} M_sun (estimated from R-M relation)")
+                    else:
+                        raise ValueError("Stellar radius missing; cannot estimate mass.")
                     
             except Exception as e:
                 print(f"  Catalog query failed: {e}")
                 # Estimate from radius using mass-radius relation
-                M_star = R_star ** 2.5
-                print(f"  M* = {M_star:.2f} M_sun (estimated from R-M relation)")
+                if R_star is not None:
+                    M_star = R_star ** 2.5
+                    print(f"  M* = {M_star:.2f} M_sun (estimated from R-M relation)")
+                else:
+                    raise ValueError("Stellar radius missing; cannot estimate mass.")
         
-        # Get limb darkening from Claret tables
-        u1, u2 = get_limb_darkening_claret(Teff, logg, feh)
+        # Get limb darkening from Claret tables using mission-specific bandpass
+        u1, u2 = get_limb_darkening_claret(Teff, logg, feh, mission=mission)
         
         print(f"  R* = {R_star:.2f} R_sun (from KIC)")
         print(f"  Teff = {Teff:.0f} K (from KIC)")
         print(f"  log(g) = {logg:.2f} (from KIC)")
         print(f"  [Fe/H] = {feh:.2f} (from KIC)")
-        print(f"  u1, u2 = {u1:.4f}, {u2:.4f} (exotic-ld/Claret, Kepler band)")
         
         stellar = StellarParams(
             R_star=float(R_star),
@@ -190,18 +236,10 @@ def load_data(star_name='HAT-P-7', cache_dir='data_cache'):
             u2=u2
         )
                     
-    except Exception as e:
+    except Exception as e:  
         print(f"  Stellar parameter query failed: {e}")
-        print(f"  Using default solar values...")
-        
-        # Fallback to defaults if query fails
-        print(f"  Using default solar-type stellar parameters")
-        stellar = StellarParams(
-            R_star=1.0,   # Solar radii
-            M_star=1.0,   # Solar masses
-            u1=0.40,      # Sun-like limb darkening
-            u2=0.26
-        )
+        print(f"  ERROR: Cannot proceed without stellar parameters")
+        raise ValueError(f"Failed to query stellar parameters for {star_name}. Cannot use default solar values.") from e
     
     # Cache the data for future runs
     print(f"  Saving data to cache: {cache_file}")
@@ -241,7 +279,18 @@ def get_known_period(planet_name='HAT-P-7 b', use_hardcoded=True):
         # Hardcoded periods for known planets
         periods = {
             'HAT-P-7 b': 2.204735,      # Pál et al. 2008
-            'Kepler-447 b': 7.79430132   # Literature value
+            'WASP-12 b': 1.09142245,    # Hebb et al. 2009
+            'HAT-P-32 b': 2.150008,     # Hartman et al. 2011
+            'Kepler-447 b': 7.79430132, # Literature value
+            'Kepler-432 b': 52.501129,  # Ciceri et al. 2015
+            'HAT-P-2 b': 5.6334729,     # Bakos et al. 2007, Pál et al. 2010
+            'Kepler-63 b': 9.4343,      # Sanchis-Ojeda et al. 2013 - very grazing b~0.94
+            'CoRoT-1 b': 1.5089557,     # Barge et al. 2008, Pont et al. 2010
+            'Kepler-1658 b': 3.8493715, # NASA Exoplanet Archive
+            'Kepler-423 b': 2.6843285,  # NASA Exoplanet Archive
+            'Kepler-412 b': 1.7208613,  # NASA Exoplanet Archive
+            'Kepler-13 b': 1.7635892,   # NASA Exoplanet Archive
+            'Kepler-8 b': 3.5224986     # NASA Exoplanet Archive
         }
         
         known_period = periods.get(planet_name, 2.204735)

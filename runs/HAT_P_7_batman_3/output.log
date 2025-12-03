@@ -1,0 +1,66 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: HAT-P-7 | Run #3
+Transit Model: batman
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 2.20473500 days
+
+Using period: 2.204735 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=5.33e-02, P=2.204735d, Rp/Rs=0.0688 (depth=0.4737%), impact=0.268, dur=4.15hr
+  u1=0.3075 (fixed), u2=0.2765 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0225, 0.0926], impact range: [0.145, 0.932]
+Gen 21: Fitness=4.33e-03, P=2.204735d, Rp/Rs=0.0731 (depth=0.5337%), impact=0.474, dur=3.78hr
+  u1=0.3075 (fixed), u2=0.3174 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0207, 0.0731], impact range: [0.323, 0.950]
+Gen 41: Fitness=3.02e-03, P=2.204735d, Rp/Rs=0.0789 (depth=0.6229%), impact=0.545, dur=3.60hr
+  u1=0.3075 (fixed), u2=0.3347 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0200, 0.0789], impact range: [0.545, 0.950]
+Gen 61: Fitness=2.44e-03, P=2.204735d, Rp/Rs=0.0777 (depth=0.6033%), impact=0.545, dur=3.60hr
+  u1=0.3075 (fixed), u2=0.3347 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0334, 0.0873], impact range: [0.545, 0.950]
+Gen 81: Fitness=2.42e-03, P=2.204735d, Rp/Rs=0.0772 (depth=0.5967%), impact=0.545, dur=3.60hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0200, 0.0988], impact range: [0.473, 0.950]
+Gen 101: Fitness=2.33e-03, P=2.204735d, Rp/Rs=0.0766 (depth=0.5872%), impact=0.546, dur=3.60hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0200, 0.0821], impact range: [0.545, 0.950]
+Gen 121: Fitness=2.29e-03, P=2.204735d, Rp/Rs=0.0772 (depth=0.5957%), impact=0.546, dur=3.60hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0755, 0.0772], impact range: [0.538, 0.595]
+Gen 141: Fitness=2.24e-03, P=2.204735d, Rp/Rs=0.0774 (depth=0.5989%), impact=0.552, dur=3.58hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0773, 0.0774], impact range: [0.548, 0.552]
+Gen 161: Fitness=2.24e-03, P=2.204735d, Rp/Rs=0.0774 (depth=0.5992%), impact=0.551, dur=3.58hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0774, 0.0774], impact range: [0.551, 0.551]
+Gen 181: Fitness=2.24e-03, P=2.204735d, Rp/Rs=0.0774 (depth=0.5992%), impact=0.551, dur=3.58hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0774, 0.0774], impact range: [0.551, 0.551]
+Gen 200: Fitness=2.24e-03, P=2.204735d, Rp/Rs=0.0774 (depth=0.5992%), impact=0.551, dur=3.58hr
+  u1=0.3075 (fixed), u2=0.3368 (Claret: 0.2807)
+  Top 10 Rp/Rs range: [0.0774, 0.0774], impact range: [0.551, 0.551]
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    2.204735 days
+T0:        121.359 BJD-2454833
+Rp/Rs:     0.0774
+Depth:     0.5992% (5992 ppm)
+Impact:    0.551
+Duration:  3.58 hours (from stellar params)
+u1:        0.3075 (FIXED from Claret)
+u2:        0.3368 (Claret: 0.2807)
+============================================================
+
+Plot saved: runs\HAT_P_7_batman_3\results.png
+
+Results saved to: runs\HAT_P_7_batman_3
+  - Plot: runs\HAT_P_7_batman_3\results.png
+  - Log: runs\HAT_P_7_batman_3\output.log

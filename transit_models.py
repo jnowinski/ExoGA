@@ -40,11 +40,11 @@ def expected_duration(P, stellar, impact):
     return duration
 
 
-def limb_darkened_transit(time, t0, RpRs, P, impact, stellar, model='batman'):
+def limb_darkened_transit(time, t0, RpRs, P, impact, stellar, model='batman', ecc=0.0, omega=0.0):
     """
     Transit model with quadratic limb darkening
     
-    Supports batman (Mandel & Agol), pytransit (Parviainen), or ellc
+    Supports batman (Mandel & Agol), pytransit (Parviainen)
     
     Args:
         time: observation times
@@ -53,44 +53,22 @@ def limb_darkened_transit(time, t0, RpRs, P, impact, stellar, model='batman'):
         P: period
         impact: impact parameter
         stellar: StellarParams object
-        model: 'batman', 'pytransit', or 'ellc'
+        model: 'batman' or 'pytransit'
+        ecc: orbital eccentricity (0-1)
+        omega: argument of periastron (degrees)
     """
     # Semi-major axis in stellar radii (from Kepler's 3rd law)
     a_AU = (stellar.M_star * (P / 365.25)**2)**(1/3)
     a_over_rs = a_AU * 215.032 / stellar.R_star
     
-    if model == 'ellc':
-        import ellc
-        
-        r_1 = 1.0 / a_over_rs
-        r_2 = RpRs / a_over_rs
-        inc = np.degrees(np.arccos(impact / a_over_rs))
-        
-        flux = ellc.lc(
-            t_obs=time,
-            radius_1=r_1,
-            radius_2=r_2,
-            sbratio=0.0,
-            incl=inc,
-            t_zero=t0,
-            period=P,
-            a=a_over_rs,
-            q=0.001,
-            ldc_1=[stellar.u1, stellar.u2],
-            ld_1='quad',
-            shape_1='sphere',
-            shape_2='sphere'
-        )
-        return flux
-    
-    elif model == 'pytransit':
+    if model == 'pytransit':
         from pytransit import QuadraticModel
         
         tm = QuadraticModel()
         tm.set_data(time)
         
         k = RpRs
-        inc = np.degrees(np.arccos(impact / a_over_rs))
+        inc = np.arccos(impact / a_over_rs)  # RADIANS for pytransit (not degrees!)
         
         flux = tm.evaluate(k, [stellar.u1, stellar.u2], t0, P, a_over_rs, inc)
         return flux
@@ -104,8 +82,8 @@ def limb_darkened_transit(time, t0, RpRs, P, impact, stellar, model='batman'):
         params.rp = RpRs
         params.a = a_over_rs
         params.inc = np.degrees(np.arccos(impact / a_over_rs))
-        params.ecc = 0.0
-        params.w = 90.0
+        params.ecc = ecc
+        params.w = omega
         params.u = [stellar.u1, stellar.u2]
         params.limb_dark = "quadratic"
         

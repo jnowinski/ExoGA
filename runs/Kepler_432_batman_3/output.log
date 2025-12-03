@@ -1,0 +1,83 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: Kepler-432 | Run #3
+Transit Model: batman
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 52.50112900 days
+
+Using period: 52.501129 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=8.12e-01, P=52.501129d, Rp/Rs=0.0351 (depth=0.1231%), impact=0.698, dur=4.87hr
+  u1=0.4000 (fixed), u2=0.2825 (Claret: 0.2600)
+  ecc=0.7114, omega=278.3°
+  Top 10 Rp/Rs range: [0.0211, 0.0511], impact range: [0.171, 0.949]
+Gen 21: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0257 (depth=0.0661%), impact=0.547, dur=5.69hr
+  u1=0.4000 (fixed), u2=0.3120 (Claret: 0.2600)
+  ecc=0.7125, omega=318.9°
+  Top 10 Rp/Rs range: [0.0247, 0.0307], impact range: [0.376, 0.950]
+Gen 41: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0257 (depth=0.0661%), impact=0.242, dur=6.60hr
+  u1=0.4000 (fixed), u2=0.2487 (Claret: 0.2600)
+  ecc=0.7686, omega=318.9°
+  Top 10 Rp/Rs range: [0.0257, 0.0323], impact range: [0.239, 0.950]
+Gen 61: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0237 (depth=0.0563%), impact=0.267, dur=6.55hr
+  u1=0.4000 (fixed), u2=0.2080 (Claret: 0.2600)
+  ecc=0.7686, omega=276.2°
+  Top 10 Rp/Rs range: [0.0236, 0.0340], impact range: [0.267, 0.950]
+Gen 81: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0236 (depth=0.0557%), impact=0.037, dur=6.79hr
+  u1=0.4000 (fixed), u2=0.2965 (Claret: 0.2600)
+  ecc=0.7714, omega=268.7°
+  Top 10 Rp/Rs range: [0.0236, 0.0322], impact range: [0.037, 0.950]
+Gen 101: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0236 (depth=0.0557%), impact=0.000, dur=6.80hr
+  u1=0.4000 (fixed), u2=0.2594 (Claret: 0.2600)
+  ecc=0.8000, omega=270.9°
+  Top 10 Rp/Rs range: [0.0200, 0.0308], impact range: [0.000, 0.950]
+Gen 121: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0236 (depth=0.0557%), impact=0.000, dur=6.80hr
+  u1=0.4000 (fixed), u2=0.2477 (Claret: 0.2600)
+  ecc=0.8000, omega=270.9°
+  Top 10 Rp/Rs range: [0.0210, 0.0323], impact range: [0.000, 0.769]
+Gen 141: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0236 (depth=0.0557%), impact=0.000, dur=6.80hr
+  u1=0.4000 (fixed), u2=0.2080 (Claret: 0.2600)
+  ecc=0.8000, omega=270.9°
+  Top 10 Rp/Rs range: [0.0232, 0.0327], impact range: [0.000, 0.950]
+Gen 161: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0236 (depth=0.0557%), impact=0.000, dur=6.80hr
+  u1=0.4000 (fixed), u2=0.2080 (Claret: 0.2600)
+  ecc=0.8000, omega=270.9°
+  Top 10 Rp/Rs range: [0.0232, 0.0236], impact range: [0.000, 0.000]
+Gen 181: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0236 (depth=0.0557%), impact=0.000, dur=6.80hr
+  u1=0.4000 (fixed), u2=0.2080 (Claret: 0.2600)
+  ecc=0.8000, omega=270.9°
+  Top 10 Rp/Rs range: [0.0236, 0.0313], impact range: [0.000, 0.664]
+Gen 201: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0236 (depth=0.0557%), impact=0.000, dur=6.80hr
+  u1=0.4000 (fixed), u2=0.2080 (Claret: 0.2600)
+  ecc=0.8000, omega=270.9°
+  Top 10 Rp/Rs range: [0.0234, 0.0314], impact range: [0.000, 0.436]
+
+*** CONVERGED at generation 209 ***
+    Fitness change over last 50 gens: 0.00e+00
+    (threshold: 1.00e-10)
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    52.501129 days
+T0:        2430.260 BJD-2454833
+Rp/Rs:     0.0236
+Depth:     0.0557% (557 ppm)
+Impact:    0.000
+Duration:  6.80 hours (from stellar params)
+u1:        0.4000 (FIXED from Claret)
+u2:        0.2080 (Claret: 0.2600)
+ecc:       0.8000
+omega:     270.9 degrees
+============================================================
+
+Plot saved: runs\Kepler_432_batman_3\results.png
+
+Results saved to: runs\Kepler_432_batman_3
+  - Plot: runs\Kepler_432_batman_3\results.png
+  - Log: runs\Kepler_432_batman_3\output.log

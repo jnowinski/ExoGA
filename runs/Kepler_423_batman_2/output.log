@@ -1,0 +1,53 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: Kepler-423 | Run #2
+Transit Model: batman
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 2.68432850 days
+
+Using period: 2.6843285 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+*** u2 FIXED at theoretical value: 0.2596 ***
+
+Gen 1: Fitness=5.82e+01, P=2.684328d, Rp/Rs=0.0672 (depth=0.4518%), impact=0.036, dur=2.58hr
+  u1=0.3642 (fixed), u2=0.2596 (Claret: 0.2596)
+  Top 10 Rp/Rs range: [0.0291, 0.1042], impact range: [0.036, 0.844]
+Gen 21: Fitness=5.78e+01, P=2.684328d, Rp/Rs=0.1204 (depth=1.4506%), impact=0.446, dur=2.31hr
+  u1=0.3642 (fixed), u2=0.2596 (Claret: 0.2596)
+  Top 10 Rp/Rs range: [0.0737, 0.1231], impact range: [0.239, 0.741]
+Gen 41: Fitness=5.78e+01, P=2.684328d, Rp/Rs=0.1177 (depth=1.3864%), impact=0.376, dur=2.40hr
+  u1=0.3642 (fixed), u2=0.2596 (Claret: 0.2596)
+  Top 10 Rp/Rs range: [0.1133, 0.1209], impact range: [0.318, 0.405]
+Gen 61: Fitness=5.78e+01, P=2.684328d, Rp/Rs=0.1177 (depth=1.3864%), impact=0.389, dur=2.38hr
+  u1=0.3642 (fixed), u2=0.2596 (Claret: 0.2596)
+  Top 10 Rp/Rs range: [0.1177, 0.1177], impact range: [0.381, 0.389]
+Gen 81: Fitness=5.78e+01, P=2.684328d, Rp/Rs=0.1177 (depth=1.3851%), impact=0.389, dur=2.38hr
+  u1=0.3642 (fixed), u2=0.2596 (Claret: 0.2596)
+  Top 10 Rp/Rs range: [0.1177, 0.1177], impact range: [0.389, 0.389]
+Gen 100: Fitness=5.78e+01, P=2.684328d, Rp/Rs=0.1179 (depth=1.3895%), impact=0.392, dur=2.38hr
+  u1=0.3642 (fixed), u2=0.2596 (Claret: 0.2596)
+  Top 10 Rp/Rs range: [0.1177, 0.1179], impact range: [0.385, 0.392]
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    2.684328 days
+T0:        2392.811 BJD-2454833
+Rp/Rs:     0.1179
+Depth:     1.3895% (13895 ppm)
+Impact:    0.392
+Duration:  2.38 hours (from stellar params)
+u1:        0.3642 (FIXED from Claret)
+u2:        0.2596 (Claret: 0.2596)
+============================================================
+
+Plot saved: runs\Kepler_423_batman_2\results.png
+
+Results saved to: runs\Kepler_423_batman_2
+  - Plot: runs\Kepler_423_batman_2\results.png
+  - Log: runs\Kepler_423_batman_2\output.log

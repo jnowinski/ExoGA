@@ -1,0 +1,29 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: Kepler-432 | Run #2
+Transit Model: batman
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 52.50112900 days
+
+Using period: 52.501129 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=8.12e-01, P=52.501129d, Rp/Rs=0.0232 (depth=0.0539%), impact=0.274, dur=6.54hr
+  u1=0.4000 (fixed), u2=0.4597 (Claret: 0.2600)
+  Top 10 Rp/Rs range: [0.0232, 0.0420], impact range: [0.078, 0.925]
+Gen 21: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0240 (depth=0.0575%), impact=0.120, dur=6.75hr
+  u1=0.4000 (fixed), u2=0.3120 (Claret: 0.2600)
+  Top 10 Rp/Rs range: [0.0200, 0.0289], impact range: [0.000, 0.431]
+Gen 41: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0255 (depth=0.0652%), impact=0.000, dur=6.80hr
+  u1=0.4000 (fixed), u2=0.2080 (Claret: 0.2600)
+  Top 10 Rp/Rs range: [0.0222, 0.0284], impact range: [0.000, 0.083]
+Gen 61: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0273 (depth=0.0744%), impact=0.000, dur=6.80hr
+  u1=0.4000 (fixed), u2=0.2080 (Claret: 0.2600)
+  Top 10 Rp/Rs range: [0.0238, 0.0276], impact range: [0.000, 0.170]
+Gen 81: Fitness=8.11e-01, P=52.501129d, Rp/Rs=0.0263 (depth=0.0691%), impact=0.000, dur=6.80hr
+  u1=0.4000 (fixed), u2=0.2125 (Claret: 0.2600)
+  Top 10 Rp/Rs range: [0.0234, 0.0267], impact range: [0.000, 0.158]

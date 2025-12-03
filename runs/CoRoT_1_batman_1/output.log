@@ -1,0 +1,17 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: CoRoT-1 | Run #1
+Transit Model: batman
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 2.20473500 days
+
+Using period: 2.204735 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=3.87e+00, P=2.204735d, Rp/Rs=0.0444 (depth=0.1972%), impact=0.774, dur=1.79hr
+  u1=0.3035 (fixed), u2=0.3088 (Claret: 0.2821)
+  Top 10 Rp/Rs range: [0.0249, 0.0495], impact range: [0.068, 0.947]

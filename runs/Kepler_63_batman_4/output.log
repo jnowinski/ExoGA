@@ -1,0 +1,59 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: Kepler-63 | Run #4
+Transit Model: batman
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 9.43430000 days
+
+Using period: 9.4343 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=2.00e-02, P=9.434300d, Rp/Rs=0.0457 (depth=0.2093%), impact=0.938, dur=1.27hr
+  u1=0.4050 (fixed), u2=0.2894 (Claret: 0.2429)
+  CIRCULAR: ecc=0.0000, omega=0.0° | Pop: 235 circular, 65 eccentric
+  Top 10 Rp/Rs range: [0.0292, 0.0520], impact range: [0.144, 0.938]
+Gen 21: Fitness=2.15e-04, P=9.434300d, Rp/Rs=0.0376 (depth=0.1412%), impact=0.950, dur=1.14hr
+  u1=0.4050 (fixed), u2=0.2878 (Claret: 0.2429)
+  CIRCULAR: ecc=0.0000, omega=0.0° | Pop: 230 circular, 70 eccentric
+  Top 10 Rp/Rs range: [0.0363, 0.0377], impact range: [0.936, 0.950]
+Gen 41: Fitness=2.15e-04, P=9.434300d, Rp/Rs=0.0376 (depth=0.1412%), impact=0.950, dur=1.14hr
+  u1=0.4050 (fixed), u2=0.2878 (Claret: 0.2429)
+  CIRCULAR: ecc=0.0000, omega=0.0° | Pop: 232 circular, 68 eccentric
+  Top 10 Rp/Rs range: [0.0367, 0.0377], impact range: [0.949, 0.950]
+Gen 61: Fitness=1.67e-04, P=9.434300d, Rp/Rs=0.0376 (depth=0.1412%), impact=0.950, dur=1.14hr
+  u1=0.4050 (fixed), u2=0.2878 (Claret: 0.2429)
+  CIRCULAR: ecc=0.0000, omega=0.0° | Pop: 237 circular, 63 eccentric
+  Top 10 Rp/Rs range: [0.0376, 0.0376], impact range: [0.950, 0.950]
+Gen 81: Fitness=4.57e-06, P=9.434300d, Rp/Rs=0.0376 (depth=0.1412%), impact=0.950, dur=1.14hr
+  u1=0.4050 (fixed), u2=0.2878 (Claret: 0.2429)
+  CIRCULAR: ecc=0.0000, omega=0.0° | Pop: 241 circular, 59 eccentric
+  Top 10 Rp/Rs range: [0.0376, 0.0376], impact range: [0.950, 0.950]
+Gen 100: Fitness=4.57e-06, P=9.434300d, Rp/Rs=0.0376 (depth=0.1412%), impact=0.950, dur=1.14hr
+  u1=0.4050 (fixed), u2=0.2878 (Claret: 0.2429)
+  CIRCULAR: ecc=0.0000, omega=0.0° | Pop: 222 circular, 78 eccentric
+  Top 10 Rp/Rs range: [0.0376, 0.0376], impact range: [0.950, 0.950]
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    9.434300 days
+T0:        1683.755 BJD-2454833
+Rp/Rs:     0.0376
+Depth:     0.1412% (1412 ppm)
+Impact:    0.950
+Duration:  1.14 hours (from stellar params)
+u1:        0.4050 (FIXED from Claret)
+u2:        0.2878 (Claret: 0.2429)
+ecc:       0.0000
+omega:     0.0 degrees
+============================================================
+
+Plot saved: runs\Kepler_63_batman_4\results.png
+
+Results saved to: runs\Kepler_63_batman_4
+  - Plot: runs\Kepler_63_batman_4\results.png
+  - Log: runs\Kepler_63_batman_4\output.log

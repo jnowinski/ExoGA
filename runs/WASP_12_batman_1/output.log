@@ -1,0 +1,58 @@
+============================================================
+STELLAR-CONSTRAINED GA DETECTION
+Star: WASP-12 | Run #1
+Transit Model: batman
+============================================================
+
+Using hardcoded literature period...
+  Literature period: 1.09142245 days
+
+Using period: 1.09142245 days
+
+============================================================
+GA OPTIMIZATION
+============================================================
+Gen 1: Fitness=1.10e+00, P=1.091422d, Rp/Rs=0.1149 (depth=1.3207%), impact=0.656, dur=2.37hr
+  u1=0.3088 (fixed), u2=0.3450 (Claret: 0.2802)
+  Top 10 Rp/Rs range: [0.0257, 0.1154], impact range: [0.029, 0.862]
+Gen 21: Fitness=3.87e-01, P=1.091422d, Rp/Rs=0.1169 (depth=1.3659%), impact=0.580, dur=2.57hr
+  u1=0.3088 (fixed), u2=0.2849 (Claret: 0.2802)
+  Top 10 Rp/Rs range: [0.0861, 0.1335], impact range: [0.167, 0.609]
+Gen 41: Fitness=3.68e-01, P=1.091422d, Rp/Rs=0.1166 (depth=1.3604%), impact=0.550, dur=2.64hr
+  u1=0.3088 (fixed), u2=0.3363 (Claret: 0.2802)
+  Top 10 Rp/Rs range: [0.0439, 0.1259], impact range: [0.550, 0.806]
+Gen 61: Fitness=3.68e-01, P=1.091422d, Rp/Rs=0.1178 (depth=1.3882%), impact=0.569, dur=2.59hr
+  u1=0.3088 (fixed), u2=0.3363 (Claret: 0.2802)
+  Top 10 Rp/Rs range: [0.0240, 0.1267], impact range: [0.569, 0.889]
+Gen 81: Fitness=3.68e-01, P=1.091422d, Rp/Rs=0.1178 (depth=1.3882%), impact=0.569, dur=2.59hr
+  u1=0.3088 (fixed), u2=0.2739 (Claret: 0.2802)
+  Top 10 Rp/Rs range: [0.0200, 0.1251], impact range: [0.190, 0.840]
+Gen 101: Fitness=3.68e-01, P=1.091422d, Rp/Rs=0.1178 (depth=1.3882%), impact=0.569, dur=2.59hr
+  u1=0.3088 (fixed), u2=0.2739 (Claret: 0.2802)
+  Top 10 Rp/Rs range: [0.0420, 0.1178], impact range: [0.167, 0.702]
+Gen 121: Fitness=3.68e-01, P=1.091422d, Rp/Rs=0.1178 (depth=1.3882%), impact=0.569, dur=2.59hr
+  u1=0.3088 (fixed), u2=0.2739 (Claret: 0.2802)
+  Top 10 Rp/Rs range: [0.0200, 0.1178], impact range: [0.428, 0.808]
+
+*** CONVERGED at generation 123 ***
+    Fitness change over last 50 gens: 0.00e+00
+    (threshold: 1.00e-10)
+
+============================================================
+FINAL RESULT
+============================================================
+Period:    1.091422 days
+T0:        1842.999 BJD-2454833
+Rp/Rs:     0.1178
+Depth:     1.3882% (13882 ppm)
+Impact:    0.569
+Duration:  2.59 hours (from stellar params)
+u1:        0.3088 (FIXED from Claret)
+u2:        0.2739 (Claret: 0.2802)
+============================================================
+
+Plot saved: runs\WASP_12_batman_1\results.png
+
+Results saved to: runs\WASP_12_batman_1
+  - Plot: runs\WASP_12_batman_1\results.png
+  - Log: runs\WASP_12_batman_1\output.log
